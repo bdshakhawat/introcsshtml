@@ -17,6 +17,28 @@ p.outset {border-style: outset;}
 p.none {border-style: none;}
 p.hidden {border-style: hidden;}
 p.mix {border-style: dotted dashed solid double;}
+
+
+/* Define look of the table */
+table {
+  border-width: 3px;
+  background-color: #52E396;
+}
+tr, td {
+  padding: 2px;
+}
+
+/* border-style example classes */
+.b1 {border-style:none;}
+.b2 {border-style:hidden;}
+.b3 {border-style:dotted;}
+.b4 {border-style:dashed;}
+.b5 {border-style:solid;}
+.b6 {border-style:double;}
+.b7 {border-style:groove;}
+.b8 {border-style:ridge;}
+.b9 {border-style:inset;}
+.b10 {border-style:outset;}
     </style>
 </head>
 <body>
@@ -41,6 +63,73 @@ p.mix {border-style: dotted dashed solid double;}
          border-right-style:double;">
          This is a a border with four different styles.
 </p>
+<!-- /* Table with all proprty values */ -->
+<h2>This is an example with all property values</h2>
+<table>
+    <tr>
+      <td class="b1">none</td>
+      <td class="b2">hidden</td>
+      <td class="b3">dotted</td>
+      <td class="b4">dashed</td>
+    </tr>
+    <tr>
+      <td class="b5">solid</td>
+      <td class="b6">double</td>
+      <td class="b7">groove</td>
+      <td class="b8">ridge</td>
+    </tr>
+    <tr>
+      <td class="b9">inset</td>
+      <td class="b10">outset</td>
+    </tr>
+  </table>
     
 </body>
+<!-- 
+    The CSS border-style property defines the line style of the border of a box.
+    Syntax
+The CSS border-style property can be expressed with one, two, three or four values provided.
+***This property is a shorthand for the following CSS properties:
+
+border-bottom-style
+border-left-style
+border-right-style
+border-top-style****
+
+****/* Keyword values */
+border-style: none;
+border-style: hidden;
+border-style: dotted;
+border-style: dashed;
+border-style: solid;
+border-style: double;
+border-style: groove;
+border-style: ridge;
+border-style: inset;
+border-style: outset;
+
+/* top and bottom | left and right */
+border-style: dotted solid;
+
+/* top | left and right | bottom */
+border-style: hidden double dashed;
+
+/* top | right | bottom | left */
+border-style: none solid dotted dashed;
+
+/* Global values */
+border-style: inherit;
+border-style: initial;
+border-style: unset; *****
+
+*****The border-style property may be specified using one, two, three, or four values.
+
+When one value is specified, it applies the same style to all four sides.
+When two values are specified, the first style applies to the top and bottom, the second to the left and right.
+When three values are specified, the first style applies to the top, the second to the left and right, the third to the bottom.
+When four values are specified, the styles apply to the top, right, bottom, and left in that order (clockwise).****
+
+
+
+ -->
 </html>
