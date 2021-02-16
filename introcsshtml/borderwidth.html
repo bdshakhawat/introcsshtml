@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sval {
+  border: ridge #ccc;
+  border-width: 6px;
+}
+#bival {
+  border: solid red;
+  border-width: 2px 10px;
+}
+#treval {
+  border: dotted orange;
+  border-width: 0.3em 0 9px;
+}
+#fourval {
+  border: solid lightgreen;
+  border-width: thin medium thick 1em;
+}
+p {
+  width: auto;
+  margin: 0.25em;
+  padding: 0.25em;
+}
+p { 
+        border-style: solid;
+        padding: 20px;
+        margin: 20px;
+    }
+    p.one {
+        border-width: 5px;
+    }
+    p.two {
+        border-width: 5px 10px;
+    }
+    p.three {
+        border-width: 5px 10px 15px;
+    }
+    p.four {
+        border-width: medium 10px thick 15px;
+    }
+</style>
+    </style>
+</head>
+<body>
+    <p id="sval">
+        one value: 6px wide border on all 4 sides</p>
+    <p id="bival">
+        two different values: 2px wide top and bottom border, 10px wide right and left border</p>
+    <p id="treval">
+        three different values: 0.3em top, 9px bottom, and zero width right and left</p>
+    <p id="fourval">
+        four different values: "thin" top, "medium" right, "thick" bottom, and 1em left</p>
+        <h1>Example of border width</h1>
+        <p class="one"><strong>one-value syntax:</strong> the single value sets the width of all four border sides.</p>
+    <p class="two"><strong>two-value syntax:</strong> the first value sets the width of the top and bottom border, while the second value sets the width of the right and left sides border.</p>
+    <p class="three"><strong>three-value syntax:</strong> the first value sets the width of the top border, the second value sets the width of the right and left border, and the third value sets the width of the the bottom border.</p>
+    <p class="four"><strong>four-value syntax:</strong> each value sets the width of the border individually in the order top, right, bottom, and left.</p>
+    
+</body>
+<!-- 
+****border-width: Specifies the thickness of the border.
+<length>: A numeric value measured in px, em, rem, vh and vw units.
+thin: The equivalent of 1px
+medium: The equivalent of 3px
+thick: The equivalent of 5px******
+
+******Description  :
+The border-width CSS property is a shorthand property for setting the individual border width properties i.e. border-top-width, border-right-width, border-bottom-width, and border-left-width in a single declaration.
+
+The following table summarizes the usages context and the version history of this property.
+
+Default value:	medium
+Applies to:	All elements
+Inherited:	No
+Animatable:	Yes. See animatable properties.
+Version:	CSS 1, 2, 3
+Syntax
+The syntax of the property is given with:
+
+border-width
+[ thin | medium | thick | length ] 1 to 4 values | inherit
+This shorthand notation can take one, two, three, or four whitespace separated values.
+
+If one value is specified, it applies to all border sides.
+If two values are specified, the first value is used for the top and bottom border, while the second value is used for the right and left border.
+If three values are specified, the first value is used for the top border, the second value is used for the right and left border, and the third value is used for the bottom border.
+If four values are specified, each value applies to the border individually in the order top, right, bottom, and left.
+The example below shows the border-width property in action.
+
+Note: You must declare the border-style property before the border-bottom-width property. An element must have borders before you can set the width of the border, because the default value of the border-style property is none.
+
+Property Values
+The following table describes the values of this property.
+
+Value	Description
+thin	A thin border.
+medium	A medium border.
+thick	A thick border.
+length	A length value in px, pt, cm, em, etc. Negative values are not allowed.
+inherit	If specified, the associated element takes the computed value of its parent element border-width property.
+
+******
+The border-width shorthand CSS property sets the width of an element's border.
+This property is a shorthand for the following CSS properties:
+
+border-bottom-width
+border-left-width
+border-right-width
+border-top-width
+Syntax
+/* Keyword values */
+border-width: thin;
+border-width: medium;
+border-width: thick;
+
+/* <length> values */ border-width: 4px;
+border-width: 1.2rem;
+
+/* vertical | horizontal */
+border-width: 2px 1.5em;
+
+/* top | horizontal | bottom */
+border-width: 1px 2em 1.5cm;
+
+/* top | right | bottom | left */
+border-width: 1px 2em 0 4rem;
+
+/* Global keywords */
+border-width: inherit;
+border-width: initial;
+border-width: unset;
+The border-width property may be specified using one, two, three, or four values.
+
+When one value is specified, it applies the same width to all four sides.
+When two values are specified, the first width applies to the top and bottom, the second to the left and right.
+When three values are specified, the first width applies to the top, the second to the left and right, the third to the bottom.
+When four values are specified, the widths apply to the top, right, bottom, and left in that order (clockwise).
+Values
+
+
+
+ -->
+</html>
