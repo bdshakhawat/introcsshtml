@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+  width: 400px;
+  height: 300px;
+}
+
+div > div {
+  width: 300px;
+  height: 200px;
+  border-width: 30px;
+  border-style: solid;
+  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
+  border-image-slice: 30;
+  border-image-repeat: round;
+}
+
+li {
+  display: flex;
+  place-content: center;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div></div>
+      </div>
+      
+      <ul>
+        <li>
+          <label for="width">slide to adjust <code>border-width</code></label>
+          <input type="range" min="10" max="45" id="width">
+          <output id="width-output">30px</output>
+        </li>
+        <li>
+          <label for="slice">slide to adjust <code>border-image-slice</code></label>
+          <input type="range" min="10" max="45" id="slice">
+          <output id="slice-output">30</output>
+        </li>
+      </ul>
+    <script>
+        const widthSlider = document.getElementById('width');
+const sliceSlider = document.getElementById('slice');
+const widthOutput = document.getElementById('width-output');
+const sliceOutput = document.getElementById('slice-output');
+const divElem = document.querySelector('div > div');
+
+widthSlider.addEventListener('input', () => {
+  const newValue = widthSlider.value + 'px';
+  divElem.style.borderWidth = newValue;
+  widthOutput.textContent = newValue;
+})
+
+sliceSlider.addEventListener('input', () => {
+  const newValue = sliceSlider.value;
+  divElem.style.borderImageSlice = newValue;
+  sliceOutput.textContent = newValue;
+})
+    </script>
+    
+</body>
+<!-- 
+    The border-image-slice property is used to “slice” the image which is to be used as a border image into nine pieces: four corners, four edges, and one center piece.
+
+The size of the nine pieces is determined based on the top, right, bottom, and left offsets of four imaginary lines that are offsetted inwards from the edges of the element. The offsets can be specified using absolute <number> values or <percentage> values. The four offsets don’t have to be equal.
+*****
+The border-image-slice property can take four, three, two, or one offset values.
+
+When four values are specified, they set the offsets on the top, right, bottom and left sides in that order. If three values are specified, the first one specifies the top offset, the second one specifies the right and left offsets, and the third one specifies the bottom offset. If two values are specified, the first one specifies the top and bottom offsets, and the second one specifies the right and left offsets. If one value is specified, it specifies all the four offsets.
+
+The corner pieces of the sliced image will be placed at the corners of the element to which it is going to be applied. The edges of the sliced images will be placed on the edges of the element. The border-image-repeat property specifies how the image edges will be applied to the element’s edges. The size of these slices and position is specified using the border-image-width and border-image-outset properties. You can read more about how these properties work together in the border-image shorthand property entry.
+
+The middle image part is discarded (treated as fully transparent) unless the fill keyword is present in the border-image-slice property. If the fill keyword is present, the middle piece of the border image is used as a background image to the element. The fill keyword can be placed anywhere in the declaration of the border-image-slice property (before, after, or even between the other values).
+
+The regions specified by the border-image-slice values may overlap. However, if the sum of the right and left widths is equal to or greater than the width of the image, the images for the top and bottom edge and the middle part are empty, which has the same effect as if a nonempty transparent image had been specified for those parts. Same is applied for the top and bottom values.
+
+******
+Syntax:
+border-image-slice: [<number> | <percentage>]{1,4} && fill?
+                       
+Initial: 100%
+Applies To: All elements, except internal table elements when border-collapse is collapse
+Animatable: no
+Values
+The informal syntax looks something like this:
+
+border-image-slice = [offset] [offset]? [offset]? [offset]? fill?
+                
+The question mark (?) indicates that the value is optional. When one offset is specified, it is used as a top, right, bottom, and left offset. When two offsets are specified, the first one represents the top and bottom offsets and the second one represents the right and left offsets. When three offsets are specified, the first represents the offset from the top, the second one represents the offset from the right and left, and the third one represents the bottom offset. When four offsets are specified, they represent the top, right, bottom, and left offsets, in that order.
+
+Each offset is represented as a <number> or <percentage> value. <length> values are not allowed.
+
+Percentage values are specified as percentages and thus require the ‘%’ sign after the numerical value. Number values do not take any unit. The number represents pixels for raster images and coordinates for vector images.
+
+Negative offset values are not allowed. Percentage values are computed relative to the element’s height or width, whichever applied (left and right percentage offsets are computed relative to the element’s width and top and bottom percentage offsets are computed relative to the element’s height). If the percentage value specified is larger than ‘100%’, it is computed as if it were equal to ‘100%’.
+
+fill
+The fill keyword, if present, causes the middle part of the border image to be preserved and used as an additional background image on the element. (By default it is discarded, i.e., treated as empty.) The size of the middle part and its height are resized like those of the top and left image slices, respectively.
+Notes
+The border-image-slice can also inherit its values from the computed values of the element’s parent, using the inherit keyword.
+******
+Example:
+The following are valid border-image-slice declarations:
+
+border-image-slice: 20 fill; /* number is set without units. If the image used is a raster image, it will be considered a pixel value */
+border-image-slice: 30% 25%;
+border-image-slice: fill 125 50 125;
+********
+border-image-slice
+.module {
+  border-image-source: url(border.png);
+  border-image-slice: 20;
+}
+The values of this property tell the browser where to “slice” the image to create the pieces of the border. The image is divided into 9 sections — the four corners, the four sides, and the center.
+
+The property accepts up to four positive unitless numbers or percentages, and an optional fill keyword. The initial value is 100%.
+
+Unitless numbers measure the slice by pixels on a raster image, and by coordinates on an SVG. A percentage value is relative to the size of the image. For example, on a raster image that is 100px x 100px, 10% from any side of the image is 10px. See the usage notes on SVG for more information about how percentages work on SVG images.
+
+The values measure from the top, right, bottom, and left edges of the image (in that order). If one value is missing, its value defaults to the value of its opposite side — for example if the left value is missing, but the right value is set at 10px, the left value becomes 10px too.
+
+By default, the center of the source image is discarded. But, when the fill keyword is used, it’s applied to the background of the bordered element instead.
+******
+MDN
+****
+The border-image-slice CSS property divides the image specified by border-image-source into regions. These regions form the components of an element's border image.
+The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.
+The above diagram illustrates the location of each region.
+
+Zones 1-4 are corner regions. Each one is used a single time to form the corners of the final border image.
+Zones 5-8 are edge regions. These are repeated, scaled, or otherwise modified in the final border image to match the dimensions of the element.
+Zone 9 is the middle region. It is discarded by default, but is used like a background image if the keyword fill is set.
+The border-image-repeat, border-image-width, and border-image-outset properties determine how these regions are used to form the final border image.(slice3)*******
+******
+Syntax
+/* All sides */
+border-image-slice: 30%;
+
+/* vertical | horizontal */
+border-image-slice: 10% 30%;
+
+/* top | horizontal | bottom */
+border-image-slice: 30 30% 45;
+
+/* top | right | bottom | left */
+border-image-slice: 7 12 14 5;
+
+/* Using the `fill` keyword */
+border-image-slice: 10% fill 7 12;
+
+/* Global values */
+border-image-slice: inherit;
+border-image-slice: initial;
+border-image-slice: unset;
+********
+The border-image-slice property may be specified using one to four <number-percentage> values to represent the position of each image slice. Negative values are invalid; values greater than their corresponding dimension are clamped to 100%.
+
+When one position is specified, it creates all four slices at the same distance from their respective sides.
+When two positions are specified, the first value creates slices measured from the top and bottom, the second creates slices measured from the left and right.
+When three positions are specified, the first value creates a slice measured from the top, the second creates slices measured from the left and right, the third creates a slice measured from the bottom.
+When four positions are specified, they create slices measured from the top, right, bottom, and left in that order (clockwise).
+The optional fill value, if used, can be placed anywhere in the declaration.
+*******
+Values
+<number>
+Represents an edge offset in pixels for raster images and coordinates for vector images. For vector images, the number is relative to the element's size, not the size of the source image, so percentages are generally preferable in these cases.
+<percentage>
+Represents an edge offset as a percentage of the source image's size: the width of the image for horizontal offsets, the height for vertical offsets.
+fill
+Preserves the middle image region and displays it like a background image, but stacked above the actual background. Its width and height are sized to match the top and left image regions, respectively.
+*******
+Formal syntax
+<number-percentage>{1,4} && fill?where <number-percentage> = <number> | <percentage>
+    Examples
+Adjustable border width and slice
+The following example shows a simple <div> with a border image set on it. The source image for the borders is as follows:
+
+nice multi-colored diamonds
+
+The diamonds are 30px across, therefore setting 30 pixels as the value for both border-width and border-image-slice will get you complete and fairly crisp diamonds in your border:
+
+border-width: 30px;
+border-image-slice: 30;
+These are the default values we have used in this example. However, we have also provided two sliders to allow you to dynamically change the values of the above two properties, allowing you to appreciate the effect they have:
+
+border-image-slice Changes the size of the image slice sampled for use in each border and border corner (and the content area, if the fill keyword is used) — varying this away from 30 causes the border to look somewhat irregular, but can have some interesting effects.
+
+border-width: Changes the width of the border. The sampled image size is scaled to fit inside the border, which means that if the width is bigger than the slice, the image can start to look somewhat pixelated (unless of course you use an SVG image).
+
+ -->
+</html>
