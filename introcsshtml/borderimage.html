@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #borderimg1 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(image/bordr.png) 30 round;
+}
+
+#borderimg2 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(image/bordr.png) 30 stretch;
+}
+    </style>
+</head>
+<body>
+    <h1>The border-image Property</h1>
+<p>The border-image property specifies an image to be used as the border around an element:</p>
+
+<p id="borderimg1">Here, the image tiles to fill the area. The image is rescaled if necessary, to avoid dividing tiles.</p>
+<p id="borderimg2">Here, the image is stretched to fill the area.</p>
+
+<p>Here is the original image:</p>
+<img src="image/bordr.png">
+
+<p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+    
+</body>
+<!-- 
+  border-image is a shorthand property that lets you use an image or CSS gradient as the border of an element.
+
+.module {
+  border-image: url(border.png) 25 25 round;
+}
+The border-image property can be applied to any element, except internal table elements (e.g. tr, th, td) when border-collapse is set to collapse.
+The only required property for the border-image shorthand is border-image-source. The other properties default to their initial values if they’re not specified. These are the border-image properties in order:
+
+border-image-source
+.module {
+  border-image-source: url(border.png);
+}
+This property specifies the source for the border image. This can be a URL, data URI, CSS gradient, or inline SVG (though support is limited for inline SVG, see SVG usage notes).
+
+The initial value is none.
+
+
+
+ -->
+</html>

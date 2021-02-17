@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+   border-width: 1px;
+   border-style: solid;
+   border-color: red black
+ }
+ p.one {
+    border-style: solid;
+    border-color: #0000ff;
+}
+
+p.two {
+    border-style: solid;
+    border-color: #ff0000 #0000ff;
+}
+
+p.three {
+    border-style: solid;
+    border-color: #ff0000 #00ff00 #0000ff;
+}
+
+p.four {
+    border-style: solid;
+    border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
+}
+    </style>
+</head>
+<body>
+    <p class="one">One-colored border!</p>
+<p class="two">Two-colored border!</p>
+<p class="three">Three-colored border!</p>
+<p class="four">Four-colored border!</p>
+<p><b>Note:</b> The "border-color" property does not work if it is used alone. 
+    Use the "border-style" property to set the borders first.
+</p>
+<h1>Another example</h1>
+<h1>CSS border property example</h1>
+    
+</body>
+<!-- 
+*****Definition and Usage
+The border-color property sets the color of an element's four borders. This property can have from one to four values.
+
+Examples:
+
+border-color:red green blue pink;
+top border is red
+right border is green
+bottom border is blue
+left border is pink
+
+border-color:red green blue;
+top border is red
+right and left borders are green
+bottom border is blue
+
+border-color:red green;
+top and bottom borders are red
+right and left borders are green
+
+border-color:red;
+all four borders are red
+Note: Always declare the border-style property before the border-color property. An element must have borders before you can change the color.
+
+Default value:	The current color of the element
+Inherited:	no
+Animatable:	yes. Read about animatable
+Version:	CSS1
+JavaScript syntax:	object.style.borderColor="#FF0000 blue"
+*******
+The CSS border-color property sets the color of an element’s four borders. This property can have from one to four values, made up of the elementary properties:
+
+border-top-color
+border-right-color
+border-bottom-color
+border-left-color
+The default color is the currentColor of each of these values.
+
+If you provide one value, it sets the color for the element. Two values set the horizontal and vertical values, respectively. Providing three values sets the top, vertical, and bottom values, in that order. Four values set all for sides: top, right, bottom, and left, in that order.
+
+Overview table
+Initial value
+color: The value of the 'color' property for each of the border sides border-top-color, border-right-color, border-bottom-color, and border-left-color.
+Applies to
+All elements
+Inherited
+No
+Media
+visual
+Computed value
+See individual properties
+Animatable
+Yes
+CSS Object Model Property
+borderColor
+Percentages
+N/A
+Syntax
+border-color: <color>
+border-color: currentColor
+border-color: inherit
+border-color: transparent
+Values
+<color>
+Specify the color to use on all borders. This can be anywhere from one to four values representing the top, right, bottom, and left border respectively.
+inherit
+Is a keyword indicating that all four values are inherited from their parent’s element calculated value.
+transparent
+This will apply a border that is not visible but it can have a width applied.
+currentColor
+The same as ‘color: inherit’, the color value inherited from parent object.
+
+ -->
+</html>
