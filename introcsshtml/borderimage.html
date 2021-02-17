@@ -17,6 +17,63 @@
   padding: 15px;
   border-image: url(image/bordr.png) 30 stretch;
 }
+#borderimg1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(image/bordr.png) 50 round;
+}
+
+#borderimg2 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(image/bordr.png) 20% round;
+}
+
+#borderimg3 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(image/bordr.png) 30% round;
+}
+#borderimg1 { 
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(image/bordr.png);
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 10px;
+         }
+         #borderimg2 { 
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(image/Capture.PNG);
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 20px;
+         }
+         #borderimg3 { 
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(image/bordr.png);
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 30px;
+         }
+         #bitmap {
+  width: 200px;
+  background-color: #ffa;
+  border: 36px solid orange;
+  margin: 30px;
+  padding: 10px;
+
+  border-image:
+      url("https://mdn.mozillademos.org/files/4127/border.png")  /* source */
+      27 /                    /* slice */
+      36px 28px 18px 8px /    /* width */
+      18px 14px 9px 4px       /* outset */
+      round;                  /* repeat */
+}
+
+
     </style>
 </head>
 <body>
@@ -30,6 +87,23 @@
 <img src="image/bordr.png">
 
 <p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+<h1>Another example</h1>
+<h1>The border-image Property</h1>
+
+<p id="borderimg1">border-image: url(border.png) 50 round;</p>
+<p id="borderimg2">border-image: url(border.png) 20% round;</p>
+<p id="borderimg3">border-image: url(border.png) 30% round;</p>
+
+<p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+<h1>Example from tutorial point</h1>
+<p id = "borderimg1">This is image boarder example.</p>
+<p id = "borderimg2">This is image boarder example.</p>
+<p id = "borderimg3">This is image boarder example.</p>
+<h1>Another example from MDN</h1>
+<div id="bitmap">This element is surrounded by a bitmap-based border image!</div>
+
+
+
     
 </body>
 <!-- 
@@ -48,6 +122,40 @@ border-image-source
 This property specifies the source for the border image. This can be a URL, data URI, CSS gradient, or inline SVG (though support is limited for inline SVG, see SVG usage notes).
 
 The initial value is none.
+*****
+The CSS border-image property allows you to specify an image to be used instead of the normal border around an element.
+
+The property has three parts:
+
+The image to use as the border
+Where to slice the image
+Define whether the middle sections should be repeated or stretched******
+The border-image property takes the image and slices it into nine sections, like a tic-tac-toe board. It then places the corners at the corners, and the middle sections are repeated or stretched as you specify.
+
+Note: For border-image to work, the element also needs the border property set!
+******
+The property border-image-source is used to set the image to be used instead of the border style. If this is set to none the border-style is used instead.
+*****
+CSS Border image property is used to add image boarder to some elements.you don't need to use any HTML code to call boarder image.A sample syntax of boarder image is as follows −
+
+#borderimg {
+   border: 10px solid transparent;
+   padding: 15px;
+}
+The most commonly used values are shown below −
+
+Sr.No.	Value & Description
+1	.border-image-source: Used to set the image path.
+
+2	.border-image-slice: Used to slice the boarder image.
+
+3	.border-image-width:Used to set the boarder image width
+
+4	. border-image-repeat: Used to set the boarder image as rounded, repeated and stretched
+
+*******
+
+
 
 
 
