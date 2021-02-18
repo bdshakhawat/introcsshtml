@@ -326,6 +326,29 @@ function browserResize() {
 <p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image-repeat property.</p>
  </body>
  <!-- 
+     Definition and Usage
+The border-image-repeat property specifies whether the border image should be repeated, rounded or stretched.
+
+Tip: Also look at the border-image property (a shorthand property for setting all the border-image-* properties). 
+
+Default value:	stretch
+Inherited:	no
+Animatable:	no. Read about animatable
+Version:	CSS3
+JavaScript syntax:	object.style.borderImageRepeat="round"
+CSS Syntax
+border-image-repeat: stretch|repeat|round|initial|inherit;
+Note: This property specifies how the images for the sides and the middle part of the border image are scaled and tiled. So, you can specify two values here. If the second value is omitted, it is assumed to be the same as the first.
+
+Property Values
+Value	Description	Play it
+stretch	Default value. The image is stretched to fill the area	
+repeat	The image is tiled (repeated) to fill the area	
+round	The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the image is rescaled so it fits	
+space	The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the extra space is distributed around the tiles	
+initial	Sets this property to its default value. Read about initial	
+inherit	Inherits this property from its parent element. Read about inherit	
+
 
   -->
 
