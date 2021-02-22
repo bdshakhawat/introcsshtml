@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+  font-size: 2rem;
+  font-family: serif;
+}
+
+#nokern {
+  font-kerning: none;
+}
+
+#kern {
+  font-kerning: normal;
+}
+    </style>
+</head>
+<body>
+    <div id="kern"></div>
+<div id="nokern"></div>
+<textarea id="input">AV T. ij</textarea>
+<script>
+    let input  = document.getElementById('input');
+let kern   = document.getElementById('kern');
+let nokern = document.getElementById('nokern');
+
+input.addEventListener('keyup', function() {
+  kern.textContent = input.value; /* Update content */
+  nokern.textContent = input.value;
+});
+
+kern.textContent = input.value; /* Initialize content */
+nokern.textContent = input.value;
+</script>
+    
+</body>
+<!-- 
+    The font-kerning CSS property sets the use of the kerning information stored in a font.
+
+Kerning defines how letters are spaced. In well-kerned fonts, this feature makes character spacing more uniform and pleasant to read than it would otherwise be.
+
+In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
+
+Example of font-kerning
+Syntax
+The font-kerning property is specified as one of the keyword values listed below.
+
+Values
+auto
+The browser determines whether font kerning should be used or not. For example, some browsers will disable kerning on small fonts, since applying it could harm the readability of text.
+normal
+Font kerning information stored in the font must be applied.
+none
+Font kerning information stored in the font is disabled.
+Formal definition
+Initial value	auto
+Applies to	all elements. It also applies to ::first-letter and ::first-line.
+Inherited	yes
+Computed value	as specified
+Animation type	discrete
+Formal syntax
+auto | normal | none
+ -->
+</html>
