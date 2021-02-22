@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.a {font-family: verdana;}
+div.b {font-family: 'times new roman';}
+#div1, #div2 {font-size-adjust: 0.58;}
+/* Css Tricks example1 */
+body {
+  font-family: Times;
+}
+
+h1 {
+  font-size: 2rem;
+  position: absolute;
+  left: 30px; 
+  top: 50px;
+  bottom: 0;
+  right: 30px;
+  margin: auto;
+  padding: 0;
+  line-height: 1;
+  z-index: 2;
+  color: #7fdbff;
+  opacity: .8;
+}
+
+.wf-active .webfont {
+  font-family: "chaparral-pro";
+  opacity: 1;
+  z-index: 1;
+  color: #0074d9;
+}
+
+.font-size-adjust {
+  .webfont {
+    font-size-adjust: .42;
+  }
+}
+
+button {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  cursor: pointer;
+  z-index: 999; // lazily position above text
+  
+  &:after {
+    content: " on";
+    display: inline;
+    
+    .font-size-adjust & {
+      content: " off";
+    }
+  }
+}
+    </style>
+</head>
+<body>
+    <h1>The font-size-adjust Property</h1>
+
+<p><b>Note:</b> Only Firefox supports the font-size-adjust property.</p>
+
+<h2>Two divs with the same font-size-adjust property:</h2>
+<div id="div1" class="a">
+You control the font size better with the font-size-adjust property.
+</div>
+<div id="div2" class="b">
+You control the font size better with the font-size-adjust property.
+</div>
+
+<h2>Two divs without the font-size-adjust property:</h2>
+<div class="a">
+You control the font size better with the font-size-adjust property.
+</div>
+<div class="b">
+You control the font size better with the font-size-adjust property.
+</div> <br><br>
+<!-- css Tricks example -->
+<h1>Lorem ipsum dolor sit amet.</h1>
+<h1 class="webfont">Lorem ipsum dolor sit amet.</h1>
+<button>Turn font-size-adjust</button>
+<script>
+    var btn = document.querySelector('button'),
+    html = document.documentElement,
+    toggleClass = "font-size-adjust";
+
+btn.addEventListener('click', function(e){
+  e.preventDefault();
+  html.classList.toggle(toggleClass)
+})
+</script>
+
+    
+</body>
+<!-- 
+    Definition and Usage
+The font-size-adjust property gives you better control of the font size when the first selected font is not available.
+
+When a font is not available, the browser uses the second specified font. This could result in a big change for the font size. To prevent this, use the font-size-adjust property.
+
+All fonts have an "aspect value" which is the size-difference between the lowercase letter "x" and the uppercase letter "X".
+
+When the browser knows the "aspect value" for the first selected font, the browser can figure out what font-size to use when displaying text with the second choice font.
+Default value:	none
+Inherited:	yes
+Animatable:	yes. Read about animatable
+Version:	CSS3
+JavaScript syntax:	object.style.fontSizeAdjust="0.58"
+Syntax
+font-size-adjust: number|none|initial|inherit;
+Property Values
+Value	Description
+number: 	Defines the aspect value to use
+none: 	Default value. No font size adjustment
+initial: 	Sets this property to its default value. Read about initial
+inherit: 	Inherits this property from its parent element. Read about inherit
+*****CSS Tricks***********
+This property gives developers the ability to set the font-size of an element depending on the size of its lowercase letters, rather than the uppercase letters.
+
+.element {
+  font-size: 22px;
+  font-size-adjust: .5;
+}
+In this case the lowercase letters of the font would be 11px in height, since 22 x .5 = 11.
+
+When loading fonts there’s likely to be a different aspect ratio between the lowercase letters of a fallback font and the newly loaded typeface, so font-size-adjust is useful to control the amount of reflow when we declare a new font-family and see the Flash of Unstyled Text (FOUT).
+
+In the demo below, it’s possible to toggle this property on and off to show how a web font like Chaparral differs from the x-height and alignment of characters in Times, the fallback font. But beware, this property is only supported by a small number of browsers at the moment.
+ -->
+</html>
