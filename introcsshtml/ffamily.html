@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.a {
+  font-family: "Times New Roman", Times, serif;
+}
+
+p.b {
+  font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <h1>The font-family Property</h1>
+
+<p class="a">This is a paragraph, shown in the Times New Roman font.</p>
+
+<p class="b">This is a paragraph, shown in the Arial font.</p>
+    
+</body>
+<!-- 
+    Definition and Usage
+The font-family property specifies the font for an element.
+
+The font-family property can hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font.
+
+There are two types of font family names:
+
+family-name - The name of a font-family, like "times", "courier", "arial", etc.
+generic-family - The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+Start with the font you want, and always end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+
+Note: Separate each value with a comma.
+
+Note: If a font name contains white-space, it must be quoted. Single quotes must be used when using the "style" attribute in HTML.
+
+Default value:	depends on the browser
+Inherited:	yes
+Animatable:	no. Read about animatable
+Version:	CSS1
+JavaScript syntax:	object.style.fontFamily="Verdana,sans-serif"
+CSS Syntax
+font-family: family-name|generic-family|initial|inherit;
+Property Values
+Value	Description	Play it
+family-name
+generic-family	A prioritized list of font family names and/or generic family names	
+initial	Sets this property to its default value. Read about initial	
+inherit	Inherits this property from its parent element. Read about inherit
+****W3.org*****
+FONT FAMILIES
+After the color, the font is probably the most basic property of a page. On this page I won't show any "tricks," but I will show the range of font variations that CSS allows.
+
+Since not all fonts are available on all computers (there are thousands of fonts, and most are not free), CSS provides a system of fallbacks. You list the font that you want first, then any fonts that might fill in for the first if it is unavailable, and you should end the list with a generic font, of which there are five: serif, sans-serif, monospace, cursive and fantasy.
+
+The following table shows examples of various fonts (your browser may not know all of them) and you can see what your browser does with each of the five generic ones:
+
+Font family	Your browser	Sample image
+'sans-serif': normal fonts without serifs
+Arial, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Helvetica, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Verdana, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Trebuchet MS, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Gill Sans, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Noto Sans, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Optima, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Arial Narrow, sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+sans-serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+'serif': normal fonts with serifs
+Times, Times New Roman, serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Didot, serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Georgia, serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Palatino, URW Palladio L, serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+Bookman, URW Bookman L, serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+New Century Schoolbook, TeX Gyre Schola, serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+American Typewriter, serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+serif	The Quick Brown Fox Jumps Over The Lazy Dog	
+'monospace': fixed-width fonts
+Andale Mono, monospace	The Quick Brown Fox Jumps Over The Lazy Dog	
+Courier New, monospace	The Quick Brown Fox Jumps Over The Lazy Dog	
+Courier, monospace	The Quick Brown Fox Jumps Over The Lazy Dog	
+FreeMono, monospace	The Quick Brown Fox Jumps Over The Lazy Dog	
+OCR A Std, monospace	The Quick Brown Fox Jumps Over The Lazy Dog	
+DejaVu Sans Mono, monospace	The Quick Brown Fox Jumps Over The Lazy Dog	
+monospace	The Quick Brown Fox Jumps Over The Lazy Dog	
+'cursive': fonts that emulate handwriting
+Comic Sans MS, Comic Sans, cursive	The Quick Brown Fox Jumps Over The Lazy Dog	
+Apple Chancery, cursive	The Quick Brown Fox Jumps Over The Lazy Dog	
+Bradley Hand, cursive	The Quick Brown Fox Jumps Over The Lazy Dog	
+Brush Script MT, Brush Script Std, cursive	The Quick Brown Fox Jumps Over The Lazy Dog	
+Snell Roundhand, cursive	The Quick Brown Fox Jumps Over The Lazy Dog	
+URW Chancery L, cursive	The Quick Brown Fox Jumps Over The Lazy Dog	
+cursive	The Quick Brown Fox Jumps Over The Lazy Dog	
+'fantasy': decorative fonts, for titles, etc.
+Impact, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+Luminari, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+Chalkduster, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+Jazz LET, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+Blippo, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+Stencil Std, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+Marker Felt, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+Trattatello, fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+fantasy	The Quick Brown Fox Jumps Over The Lazy Dog	
+FONT STYLES
+Most fonts have various styles within the same family, typically a bold and an italic one, often also a bold italic style, somewhat less often a small-caps and in a few cases extra-light/extra-bold or stretched/condensed versions.
+
+The table below shows a number of different styles. Unless you have a very rich collection of fonts, many of the rows will be the same.
+
+rule	serif	sans-serif
+Styles
+font-style: normal	The Quick…	The Quick…
+font-style: italic	The Quick…	The Quick…
+font-style: oblique	The Quick…	The Quick…
+Weights
+font-weight: 100	The Quick…	The Quick…
+font-weight: 200	The Quick…	The Quick…
+font-weight: 300	The Quick…	The Quick…
+font-weight: normal	The Quick…	The Quick…
+font-weight: 500	The Quick…	The Quick…
+font-weight: 600	The Quick…	The Quick…
+font-weight: bold	The Quick…	The Quick…
+font-weight: 800	The Quick…	The Quick…
+font-weight: 900	The Quick…	The Quick…
+Variants
+font-variant: normal	The Quick…	The Quick…
+font-variant: small-caps	The Quick…	The Quick…
+Stretch
+font-stretch: ultra-condensed	The Quick…	The Quick…
+font-stretch: extra-condensed	The Quick…	The Quick…
+font-stretch: condensed	The Quick…	The Quick…
+font-stretch: semi-condensed	The Quick…	The Quick…
+font-stretch: normal	The Quick…	The Quick…
+font-stretch: semi-expanded	The Quick…	The Quick…
+font-stretch: expanded	The Quick…	The Quick…
+font-stretch: extra-expanded	The Quick…	The Quick…
+font-stretch: ultra-expanded	The Quick…	The Quick…
+The CSS Fonts Module has more properties to specify special styles (for fonts that provide several variants), in particular the font-variant property has many more values.	
+*****CSS Tricks*****
+The font-family property defines the font that is applied to the selected element. The font that is selected is not a single font face, but a “family”, and thus may be dependent on other typographic property values to select the correct face within the family.
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+A value can be one of the following:
+
+A font family name that matches a font that is embedded on the page or available on the user’s system.
+A series of family names, separated by commas, which can include a generic family name
+If multiple family names are used, the browser will select the first one it finds either embedded on the page using @font-face or installed on the user’s operating system.
+
+For font-family there is no specific default or initial value; the initial value always depends on the browser and/or operating system.
+
+Generic Family Names
+If multiple values are used for a single declaration, it is recommended to have a generic family listed last as a fallback to ensure the best typographic experience:
+
+code {
+    font-family: Courier, Monaco, monospace;
+}
+In the above example, “Courier” and “Monaco” are real family names of actual fonts, whereas “monospace” is just a generic reference to any font installed on the user’s system that’s monospaced.
+
+If the first two are not found installed, the browser will select the best option, but only from monospace fonts. Without the generic family, the font would default to whatever is the default font on the user’s system (likely a serif or sans-serif), which would be undesirable.
+
+Generic family names include serif, sans-serif, cursive, fantasy, and monospace.
+
+If a family name matches a generic family name, the family name should be quoted to indicate that it is not generic.
+
+Multi-word Family Names
+If a family name contains multiple words, separated by spaces, it is recommended to list the family name in quotation marks (single or double):
+
+code {
+    font-family: "Times New Roman", Georgia, serif;
+}
+This isn’t always necessary, but it is generally safer to include the quotes for any family name that has spaces or special characters.
+
+Related Properties
+font
+font-stretch
+font-variant
+font-style
+font-weight
+line-height
+font-size
+Other Resources
+font-family on W3C
+font-family on MDN
+Unquoted CSS font family name validator
+Browser Support
+****cssreference*****
+#font-family
+font-family: "Source Sans Pro", "Arial", sans-serif;
+
+When using multiple values, the font-family list of font families defines the priority in which the browser should choose the font family.
+
+The browser will look for each family on the user's computer and in any @font-face resource.
+
+The list is prioritized from left to right: it will use the first value if it's available, or go to the next one, until the end of the list is reached. The default font family is defined by the browser preferences.
+
+In this example, the browser will try to use Source Sans Pro if it's available. If it can't find it, it will try to use Arial. If it's not available either, it will use the browser's sans-serif font.
+
+Hello world
+The quick brown fox jumps over the lazy dog
+font-family: serif;
+
+The browser will use a serif font family: all characters have stroke endings.
+
+Hello world
+The quick brown fox jumps over the lazy dog
+font-family: sans-serif;
+
+The browser will use a sans-serif font family: no character has stroke endings.
+
+Hello world
+The quick brown fox jumps over the lazy dog
+font-family: monospace;
+
+The browser will use a monospace font family: all characters have the same width.
+
+Hello world
+The quick brown fox jumps over the lazy dog
+font-family: cursive;
+
+The browser will use a cursive font family.
+
+Hello world
+The quick brown fox jumps over the lazy dog
+font-family: fantasy;
+
+The browser will use a fantasy font family.
+
+Hello world
+The quick brown fox jumps over the lazy dog
+
+*****MDN****
+The font-family CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
+Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a @font-face at-rule.
+
+It is often convenient to use the shorthand property font to set font-size and other font related properties all at once.
+
+You should always include at least one generic family name in a font-family list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.
+
+The font-family property specifies a list of fonts, from highest priority to lowest. Font selection does not stop at the first font in the list that is on the user's system. Rather, font selection is done one character at a time, so that if an available font does not have a glyph for a needed character, the latter fonts are tried. (However, this doesn't work in Internet Explorer 6 or earlier.) When a font is only available in some styles, variants, or sizes, those properties may also influence which font family is chosen.
+
+Syntax
+/* A font family name and a generic family name */
+font-family: Gill Sans Extrabold, sans-serif;
+font-family: "Goudy Bookletter 1911", sans-serif;
+
+/* A generic family name only */
+font-family: serif;
+font-family: sans-serif;
+font-family: monospace;
+font-family: cursive;
+font-family: fantasy;
+font-family: system-ui;
+font-family: ui-serif;
+font-family: ui-sans-serif;
+font-family: ui-monospace;
+font-family: ui-rounded;
+font-family: emoji;
+font-family: math;
+font-family: fangsong;
+
+/* Global values */
+font-family: inherit;
+font-family: initial;
+font-family: unset;
+The font-family property lists one or more font families, separated by commas. Each font family is specified as either a <family-name> or a <generic-name> value.
+
+The example below lists two font families, the first with a <family-name> and the second with a <generic-name>:
+
+font-family: Gill Sans Extrabold, sans-serif;
+Values
+<family-name>
+The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.
+<generic-name>
+Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
+
+serif
+Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
+E.g. Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
+sans-serif
+Glyphs have stroke endings that are plain.
+E.g. "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
+monospace
+All glyphs have the same fixed width.
+E.g. "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace.
+cursive
+Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.
+E.g. "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.
+fantasy
+Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
+E.g. Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+system-ui
+Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics. This is example system-ui text.
+ui-serif
+The default user interface serif font. This is example ui-serif text.
+ui-sans-serif
+The default user interface sans-serif font. This is example ui-sans-serif text.
+ui-monospace
+The default user interface monospace font. This is example ui-monospace text.
+ui-rounded
+The default user interface font that has rounded features. This is example ui-rounded text.
+math
+This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings. This is some example math text: ax² + bx + c = 0.
+emoji
+Fonts that are specifically designed to render emoji. This is some example emoji text: ✝♾.
+fangsong
+A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents. This is some example fangsong text with the Chinese characters for "fangsong" in traditional and simple forms, respectively: 仿宋體 仿宋体.
+Valid family names
+Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.
+
+For example, the following declarations are valid:
+
+font-family: Gill Sans Extrabold, sans-serif;
+font-family: "Goudy Bookletter 1911", sans-serif;
+The following declarations are invalid:
+
+font-family: Goudy Bookletter 1911, sans-serif;
+font-family: Red/Black, sans-serif;
+font-family: "Lucida" Grande, sans-serif;
+font-family: Ahem!, sans-serif;
+font-family: test@foo, sans-serif;
+font-family: #POUND, sans-serif;
+font-family: Hawaii 5-0, sans-serif;
+Formal definition
+Initial value	depends on user agent
+Applies to	all elements. It also applies to ::first-letter and ::first-line.
+Inherited	yes
+Computed value	as specified
+Animation type	discrete
+Formal syntax
+[ <family-name> | <generic-family> ]#where <family-name> = <string> | <custom-ident>+<generic-family> = serif | sans-serif | cursive | fantasy | monospace
+Examples
+Some common font families
+.serif {
+  font-family: Times, Times New Roman, Georgia, serif;
+}
+
+.sansserif {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+  font-family: Lucida Console, Courier, monospace;
+}
+
+.cursive {
+  font-family: cursive;
+}
+
+.fantasy {
+  font-family: fantasy;
+}
+
+.emoji {
+  font-family: emoji;
+}
+
+.math {
+  font-family: math;
+}
+
+.fangsong {
+  font-family: fangsong;
+}
+
+ -->
+</html>
