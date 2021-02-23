@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+This example uses the League Mono Variable font, developed by
+Tyler Finck (https://www.tylerfinck.com/) and used here under
+the terms of the SIL Open Font License, Version 1.1:
+http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
+*/
+
+@font-face {
+  src: url('https://mdn.mozillademos.org/files/16014/LeagueMonoVariable.ttf');
+  font-family:'LeagueMonoVariable';
+  font-style: normal;
+  font-stretch: 1% 500%; /* Required by Chrome */
+}
+
+.container {
+  border: 10px solid #f5f9fa;
+  padding: 0 1rem;
+  font: 1.5rem 'LeagueMonoVariable', sans-serif;
+}
+
+.condensed {
+  font-stretch: 50%;
+}
+
+.normal {
+  font-stretch: 100%;
+}
+
+.expanded {
+  font-stretch: 200%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="condensed">an elephantine lizard</p>
+        <p class="normal">an elephantine lizard</p>
+        <p class="expanded">an elephantine lizard</p>
+    </div>
+    
+</body>
+<!-- 
+    Definition and Usage
+The font-stretch property allows you to make text narrower (condensed) or wider (expanded).
+
+Note: Some fonts provide additional faces; condensed faces and expanded faces. For these fonts, you can use the font-stretch property to selct a normal, condensed, or expanded font face.
+
+Note: This property has no effect if the selected font does not offer condensed or expanded faces!
+
+Default value:	normal
+Inherited:	yes
+Animatable:	yes. Read about animatable
+Version:	CSS3
+JavaScript syntax:	object.style.fontStretch="expanded"
+Syntax
+font-stretch: ultra-condensed|extra-condensed|condensed|semi-condensed|normal|semi-expanded|expanded|extra-expanded|ultra-expanded|initial|inherit;
+Property Values
+Value	Description
+ultra-condensed	Makes the text as narrow as it gets
+extra-condensed	Makes the text narrower than condensed, but not as narrow as ultra-condensed
+condensed	Makes the text narrower than semi-condensed, but not as narrow as extra-condensed
+semi-condensed	Makes the text narrower than normal, but not as narrow as condensed
+normal	Default value. No font stretching
+semi-expanded	Makes the text wider than normal, but not as wide as expanded
+expanded	Makes the text wider than semi-expanded, but not as wide as extra-expanded
+extra-expanded	Makes the text wider than expanded, but not as wide as ultra-expanded
+ultra-expanded	Makes the text as wide as it gets
+initial	Sets this property to its default value. Read about initial
+inherit	Inherits this property from its parent element. Read about inherit
+**********MDN*********************
+The font-stretch CSS property selects a normal, condensed, or expanded face from a font.
+
+/* Keyword values */
+font-stretch: ultra-condensed;
+font-stretch: extra-condensed;
+font-stretch: condensed;
+font-stretch: semi-condensed;
+font-stretch: normal;
+font-stretch: semi-expanded;
+font-stretch: expanded;
+font-stretch: extra-expanded;
+font-stretch: ultra-expanded;
+
+/* Percentage values */
+font-stretch: 50%;
+font-stretch: 100%;
+font-stretch: 200%;
+
+/* Global values */
+font-stretch: inherit;
+font-stretch: initial;
+font-stretch: unset;
+Syntax
+This property may be specified as a single keyword value or a single <percentage> value.
+
+Values
+normal
+Specifies a normal font face.
+semi-condensed, condensed, extra-condensed, ultra-condensed
+Specifies a more condensed font face than normal, with ultra-condensed as the most condensed.
+semi-expanded, expanded, extra-expanded, ultra-expanded
+Specifies a more expanded font face than normal, with ultra-expanded as the most expanded.
+<percentage>
+A <percentage> value between 50% and 200% (inclusive). Negative values are not allowed for this property.
+
+In earlier versions of the font-stretch specification, the property accepts only the nine keyword values.
+
+The CSS Fonts Module Level 4 spec extends the syntax to accept a <percentage> value as well. This enables variable fonts to offer something more like a continuum of character widths. For TrueType or OpenType variable fonts, the "wdth" variation is used to implement varying widths.
+
+However, note that the <percentage> syntax is not yet supported by all browsers: check the Browser compatibility table for details.
+
+Keyword to numeric mapping
+The table below shows the mapping between keyword values and numeric percentages:
+
+Keyword	Percentage
+ultra-condensed	50%
+extra-condensed	62.5%
+condensed	75%
+semi-condensed	87.5%
+normal	100%
+semi-expanded	112.5%
+expanded	125%
+extra-expanded	150%
+ultra-expanded	200%
+Description
+Some font families offer additional faces in which the characters are narrower than the normal face (condensed faces) or wider than the normal face (expanded faces).
+
+You can use font-stretch to select a condensed or expanded face from such fonts. If the font you are using does not offer condensed or expanded faces, this property has no effect.
+
+Font face selection
+The face selected for a given value of font-stretch depends on the faces supported by the font in question. If the font does not provide a face that exactly matches the given value, then values less than 100% map to a narrower face, and values greater than or equal to 100% map to a wider face.
+
+The table below demonstrates the effect of supplying various different percentage values of font-stretch on two different fonts:
+
+50%	62.5%	75%	87.5%	100%	112.5%	125%	150%	200%
+Helvetica Neue									
+League Mono Variable									
+Helvetica Neue, which is installed by default on macOS, has a single condensed face in addition to the normal face. All values of font-stretch less than 100% select the condensed face, while all other values select the normal face.
+League Mono Variable is a variable font that offers something like a continuous range of widths for different percentage values of font-stretch.
+Formal definition
+Initial value	normal
+Applies to	all elements. It also applies to ::first-letter and ::first-line.
+Inherited	yes
+Computed value	as specified
+Animation type	a font stretch
+Formal syntax
+<font-stretch-absolute>where <font-stretch-absolute> = normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded | <percentage>
+Examples
+Setting font stretch percentages
+Note: This example will only work in browsers that support <percentage> values.
+
+HTML
+<div class="container">
+    <p class="condensed">an elephantine lizard</p>
+    <p class="normal">an elephantine lizard</p>
+    <p class="expanded">an elephantine lizard</p>
+</div>
+CSS
+/*
+This example uses the League Mono Variable font, developed by
+Tyler Finck (https://www.tylerfinck.com/) and used here under
+the terms of the SIL Open Font License, Version 1.1:
+http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
+*/
+
+@font-face {
+  src: url('https://mdn.mozillademos.org/files/16014/LeagueMonoVariable.ttf');
+  font-family:'LeagueMonoVariable';
+  font-style: normal;
+  font-stretch: 1% 500%; /* Required by Chrome */
+}
+
+.container {
+  border: 10px solid #f5f9fa;
+  padding: 0 1rem;
+  font: 1.5rem 'LeagueMonoVariable', sans-serif;
+}
+
+.condensed {
+  font-stretch: 50%;
+}
+
+.normal {
+  font-stretch: 100%;
+}
+
+.expanded {
+  font-stretch: 200%;
+}
+
+Result
+
+
+Specifications
+Specification	Status	Comment
+CSS Fonts Module Level 4
+The definition of 'font-stretch' in that specification.	Working Draft	Adds the <percentage> syntax for variable fonts.
+CSS Fonts Module Level 3
+The definition of 'font-stretch' in that specification.	Recommendation	Initial definition.
+Note: The font-stretch property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.
+
+Browser compatibility
+Report problems with this compatibility data on GitHub
+desktop	mobile
+Chrome	Edge	Firefox	Internet Explorer	Opera	Safari	WebView Android	Chrome Android	Firefox Android	Opera Android	iOS Safari	Samsung Internet
+font-stretch
+Full support60footnoteOpen	Full support12	Full support9	Full support9	Full support47footnoteOpen	Full support11	Full support60footnoteOpen	Full support60footnoteOpen	Full support9	Full support44footnoteOpen	Full support11	Full support8.0footnoteOpen
+<percentage> syntax
+Full support62	Full support18	Full support61	No supportNo	Full support49	Full support11.1	Full support62	Full support62	Full support61	Full support46	Full support11.3	Full support8.0
+Legend
+Full supportFull support
+No supportNo support
+See implementation notes.
+See also
+font-style
+font-weight
+Fundamental text and font styling
+Related Topics
+CSS
+CSS Reference
+CSS Fonts
+Guides
+OpenType font features guide
+Variable fonts guide
+At-Rules
+@font-face
+@font-feature-values
+Properties
+font-family
+font-feature-settings
+font-kerning
+font-language-override
+font-optical-sizing
+font-size-adjust
+font-size
+font-smooth
+font-stretch
+font-style
+font-synthesis
+font-variant-alternates
+font-variant-caps
+font-variant-east-asian
+font-variant-ligatures
+font-variant-numeric
+font-variant-position
+font-variant
+font-variation-settings
+font-weight
+font
+line-height-step
+line-height
+Syntax: <font-stretch-absolute>where <font-stretch-absolute> = normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded | <percentage>
+ -->
+</html>
