@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            float : left;
+            padding: 20px;
+            border: 2px solid red;
+            margin: 20px;
+            border-radius:20px ;
+            background-color: blue;
+
+        }
+        img{
+            float: right;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Float Right</h2>
+    <p>
+      explicabo molestiae hic delectus veniam, expedita, aspernatur quas. Maiores, ab! Fuga, provident incidunt.
+    </p>
+    <img src="image/curry.png.PNG" alt="">
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae perspiciatis eum cum possimus incidunt repudiandae excepturi, tempore placeat, labore ad culpa exercitationem illum! Laudantium dolore fuga tempore, iure delectus perspiciatis odit sint cupiditate praesentium, culpa nam ipsa, a facilis dignissimos veniam reiciendis minus reprehenderit et libero. Aperiam iste iure quis vel nulla. Itaque, dolorem. Laboriosam minima asperiores iusto explicabo quidem. Sit asperiores, laborum aliquam explicabo nulla provident odio voluptatum ea praesentium. Voluptas, veritatis eveniet. Vel laudantium dignissimos numquam molestiae, iusto dolorem nemo nostrum asperiores earum facilis, quisquam dolore natus, odio cupiditate fuga dolorum ab laboriosam modi corporis fugit magni? Eveniet.
+    </p>
+    <h2>Three divs are floating each other</h2>
+    <div class="div1">Div1</div>
+    <div class="div2">Div2</div>
+    <div class="div3">Div3</div> <br><br>
+    <!-- 
+        Floats" (floating elements) are simple to use but once used, the effect it has on the elements around it sometimes get unpredictable. If you have ever come across the problems of vanishing nearby elements or floats that poke out like a sore thumb, worry no more.
+
+This post covers five basic questions that will help you become an expert at floating elements.
+
+    Which elements don’t float?
+    What happens to an element when it floats?
+    What happens to the siblings of "Floats"?
+    What happens to a parent of a "Float"?
+    How do you clear "Floats"?
+
+For readers who addopt the TL;dr approach to life, there’s a summary near the end of the post.
+1. Which elements don’t float?
+
+An absolute or fixed positioned element won’t float. So the next time you encounter a float that isn’t working, check if it is in position:absolute or position:fixed and apply changes accordingly.
+2. What happens to an element when it floats?
+
+When an element is tagged "float" it runs to either the left or the right basically until it hits the wall of its container element. Alternatively, it will run until it hits another floating element that has already hit the same wall. They’ll keep piling up side by side until the space runs out, and newer incoming ones will be moved down.
+
+Floating elements also won’t go above the elements before it in the code, something you need to consider before coding a “Float” after an element to the side of which you want to float it.
+
+     -->
+     <h2>Figure of the above discussion</h2>
+     <img src="image/float.png" alt="">
+     <!-- 
+         Here are two more things that happen to a floating element depending on what type of element is being kept floating:
+An inline element will turn into a block-level element when floated
+
+Ever wondered why suddenly you’re able to assign height & width to a floating span? That’s because all the elements when floated will get the value block for its display attribute (inline-table will get table) making them block level elements.
+      -->
+    
+</body>
+<!-- 
+    
+ -->
+</html>

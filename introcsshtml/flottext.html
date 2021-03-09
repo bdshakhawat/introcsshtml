@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            text-align: center;
+            border: 2px solid gray;
+        }
+        img{
+            padding-left: 350px;
+            
+        }
+        .q1{
+            text-align: justify;
+            line-height: 1.5;
+            border: 2px solid violet;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .second {
+            border: 2px solid blue;
+            font-size: 20px;
+            text-align: justify;
+            padding: 10px;
+            color: red;
+            font-weight: 800;
+        }
+        .img-block {
+            border: 1px solid black;
+            margin-top: 10px;
+            background-color: burlywood;
+        }
+        .q2 {
+            font-weight: 900;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="first">
+            <p class="q1">
+                1. Which elements don’t float?
+        
+                An absolute or fixed positioned element won’t float. So the next time you encounter a float that isn’t working, check if it is in position:absolute or position:fixed and apply changes accordingly.
+              </p> 
+          </div>
+
+
+    </section>
+     
+      
+      <div class="second">
+          <h2>2. What happens to an element when it floats? </h2>
+         <p>
+            When an element is tagged "float" it runs to either the left or the right basically until it hits the wall of its container element. Alternatively, it will run until it hits another floating element that has already hit the same wall. They’ll keep piling up side by side until the space runs out, and newer incoming ones will be moved down.
+        
+            Floating elements also won’t go above the elements before it in the code, something you need to consider before coding a “Float” after an element to the side of which you want to float it.
+
+
+         </p>
+         <div>
+             <h2>Image of Question 2</h2>
+             <img src="image/q31.png" alt="">
+         </div>
+         <p>Here are two more things that happen to a floating element depending on what type of element is being kept floating:</p>
+         <h2> An inline element will turn into a block-level element when floated</h2>
+         <p>
+            Ever wondered why suddenly you’re able to assign height & width to a floating span? That’s because all the elements when floated will get the value block for its display attribute (inline-table will get table) making them block level elements.
+         </p> 
+         <img src="image/q3.png" alt=""> 
+         <h2>A block element of unspecified width will shrink to fit its content when floated</h2> 
+         <p>
+            Usually, when you don’t specify width to a block element, its width is the default 100%. But when floated, that’s no more the case; the block element’s box will shrink until its contents remain visible. 
+         </p> 
+         <img src="image/q31.png" alt=""> 
+
+      </div>
+      <div>
+          <p>
+                Usually, when you don’t specify width to a block element, its width is the default 100%. But when floated, that’s no more the case; the block element’s box will shrink until its contents remain visible.
+          </p>
+          
+      </div>
+      <!-- 
+          https://www.hongkiat.com/blog/css-floats/
+       -->
+
+     
+     
+</body>
+</html>
