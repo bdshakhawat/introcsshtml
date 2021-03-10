@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: blue;
+        }
+        a:visited{
+            color: red;
+        }
+        a:hover {
+            color: brown;
+        }
+        p::first-line {
+            color: red;
+        }
+        li:nth-child(2n+2){
+            color: red;
+        }
+        p::first-letter {
+            color: yellowgreen;
+            font-size: 50px;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: aquamarine;
+            position: relative;
+
+        }
+        h1::after{
+            position: absolute; 
+            content: "";
+            background: aquamarine; 
+            width: 100px;
+            height: 5px;
+            bottom: 0;
+            left: 50%;
+            margin-left: -50px;
+            padding-bottom: 1px;
+        }
+        h1::before{
+            position: absolute; 
+            content: "";
+            background: aquamarine; 
+            width: 100px;
+            height: 5px;
+            top: 0;
+            left: 50%;
+            margin-left: -50px;
+            padding-top: 1px;
+        }
+       
+    </style>
+</head>
+<body>
+    <a href="#">Procoder</a> 
+    <a >Procoder bd</a>
+    <h1>Prococer</h1>
+    <ul>
+        <li>Html</li>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>jquery</li>
+        <li>react</li>
+        <li>typescript</li>
+        <li>Deno</li>
+        <li>express js</li>
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate adipisci est cum accusantium, quae excepturi rem sint, reiciendis quisquam ea corporis vero quis quibusdam assumenda repudiandae consequuntur repellat. Incidunt, itaque!
+    </p>
+    
+</body>
+</html>

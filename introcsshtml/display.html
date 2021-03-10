@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            /* To check whether it is a block element or inline element: block element will take the whole space but inline element will take only the place required */
+            border: 5px solid lightgreen;
+            /* now i can change this block element into inline element by using display property */
+            display: inline-block ;
+            /* but if we want to use margin or padding with display inline then it will overlap with other element but if we use dilplay block or inline-block then it will not happen .There is another property which is known as display none then the  element will be invisible . generally in jquery for element transition this none property is used.*/
+        }
+        span {
+            border: 5px solid cyan ;
+            /* change into block element */
+            display: block;
+        }
+        li {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a block element</h1>
+    <span>This is a inline element</span>
+    <ul>
+        <li>Html</li>
+        <li>Css</li>
+        <li>javascript</li>
+        <li>wordpress</li>
+    </ul>
+    
+</body>
+</html>

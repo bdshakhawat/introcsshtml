@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 50%;
+            border: 5px solid black;
+        }
+        .box {
+            position: relative;
+            height: 100px;
+            width: 100px;
+            /* with reference to static (default) position it will move 100px left */
+            /* left: 100px; */
+        }
+        .red-box {
+            position: relative;
+            left: 50px;
+            
+            background-color: red;
+        }
+        .blue-box {
+            
+            background-color: blue;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box blue-box"></div>
+    </div>
+    
+</body>
+</html>
