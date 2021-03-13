@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p::after {
+            content: "  Hossain";
+
+        }
+        p::before {
+            content: " Md. ";
+
+        }
+        .container {
+            width: 500px;
+            height: 250px;
+            background: green;
+            position: relative;
+        }
+        .container::before{
+            /*Now i want to add a circle inside the created box  */
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            /* now bring it middle from the top and left */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            /* now to make the square box into a circle use border-radius */
+            border-radius: 50%;
+
+
+
+
+        }
+        /* if we want to use absolute position in any element then we have to use relative in the earlier element */
+    </style>
+</head>
+<body>
+    <p>Shakhawat</p>
+    <div class="container"></div>
+    
+</body>
+</html>

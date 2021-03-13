@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /* in every browser there is a default margin and padding. To minimize this give margin 0 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .container{
+            padding-top: 50px;
+
+        
+            /* give a temporary height to understand the size as i am deleting the text but we will remove this later when text will be added */
+            
+            width: 970px;
+            /* if any element is block level and a fixed width is given then to bring it center we need to apply margin:auto */
+            margin-left: auto;
+            margin-right: auto;
+            /* background: red; delete this because if we need to apply any color take another class to apply. Like this we can remome all the colors from the child elements also*/
+            /* color will be back */
+            /* overflow: hidden; */
+            /* when we use float in a parent div then other parent divs cannot use the space properly. to avoid this problem we need to use two property of the container or parent div in after and before. */
+            
+         }
+         .container:after,
+         .container:before{
+             content: "";
+             display: table;
+             clear: both;
+
+         }
+        .col-1 {
+            /* always use % value as width in the child div for resposive layout and to use the same css style to divide  other child element into parts */
+            width: 16%;
+            /* for temporary use the height and delete later*/
+            
+            /* background: green; */
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            /* box-sizing: border-box; but, we need to use this for every parts. so, use this property with universal selector  */
+
+        }
+        .col-2 {
+            /* always use % value as width in the child div for resposive layout and to use the same css style to divide  other child element into parts */
+            width: 20%;
+            /* for temporary use the height and delete later*/
+            
+            /* background: green; */
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            /* box-sizing: border-box; but, we need to use this for every parts. so, use this property with universal selector  */
+
+        }
+        .col-3 {
+            /* always use % value as width in the child div for resposive layout and to use the same css style to divide  other child element into parts */
+            width: 25%;
+            /* for temporary use the height and delete later*/
+            
+            /* background: green; */
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            /* box-sizing: border-box; but, we need to use this for every parts. so, use this property with universal selector  */
+
+        }
+        .col-4 {
+            /* always use % value as width in the child div for resposive layout and to use the same css style to divide  other child element into parts */
+            width: 33%;
+            /* for temporary use the height and delete later*/
+            
+            /* background: green; */
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            /* box-sizing: border-box; but, we need to use this for every parts. so, use this property with universal selector  */
+
+        }
+        .col-5 {
+            /* always use % value as width in the child div for resposive layout and to use the same css style to divide  other child element into parts */
+            width: 50%;
+            /* for temporary use the height and delete later*/
+            
+            /* background: green; */
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            /* box-sizing: border-box; but, we need to use this for every parts. so, use this property with universal selector  */
+
+        }
+        .a {
+            /* to understand the division */
+            width: 100%;
+            
+            /* background-color: hotpink; */
+        }
+        .b {
+            /* to understand the division */
+            width: 100%;
+            
+            /* background-color: blue; */
+        }
+        .c {
+            /* to understand the division */
+            width: 100%;
+            
+            /* background-color: cyan; */
+        }
+        .d {
+            /* to understand the division */
+            width: 100%;
+            
+            /* background-color: yellowgreen; */
+        }
+        /* .clearfix{
+            clear: both;
+        } */
+        
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        
+        <!-- now i want to divide the container into 4 parts. But i can divide into any number of parts -->
+        <div class="col-1">
+            <div class="a">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-1">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-1">
+            <div class="c">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+
+        </div>
+        <div class="col-1">
+            <div class="d">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores repudiandae praesentium architecto  
+            </div>
+
+        </div>
+        <div class="col-1">
+            <div class="d">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores repudiandae praesentium architecto 
+            </div>
+
+        </div>
+        <div class="col-1">
+            <div class="d">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores repudiandae praesentium architecto  
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        
+        <!-- now i want to divide the container into 4 parts. But i can divide into any number of parts -->
+        <div class="col-2">
+            <div class="a">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        
+        </div>
+        <div class="col-2">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        
+        </div>
+        <div class="col-2">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        
+        </div>
+        <div class="col-2">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        
+        </div>
+    </div>
+    
+
+    <div class="container">
+        
+        <!-- now i want to divide the container into 4 parts. But i can divide into any number of parts -->
+        <div class="col-3">
+            <div class="a">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="c">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+
+        </div>
+        <div class="col-3">
+            <div class="d">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores repudiandae praesentium architecto 
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        
+        <!-- now i want to divide the container into 4 parts. But i can divide into any number of parts -->
+        <div class="col-4">
+            <div class="a">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="c">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="container">
+        
+        <!-- now i want to divide the container into 4 parts. But i can divide into any number of parts -->
+        <div class="col-5">
+            <div class="a">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="b">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic.
+            </div>
+        </div>
+        
+        
+    </div>
+    
+
+            
+</body>
+</html>
