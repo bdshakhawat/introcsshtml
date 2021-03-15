@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* for using flex always we have to think a parent area and inside this parent area we can arrange the child elements accorcing to our needs */
+        .same {
+            width: 100px;
+            height: 100px;
+            font-size: 30px;
+            color: #fff;
+            /* to fill up all the space of the parent element equally use the grow property */
+            /* flex-grow: 1; */
+            /* flex shrink is used to make smaller */
+            /* flex-shrink: 1; */
+        }
+        .a {
+            /* all child items will go to right */
+            /* margin-left: auto; */
+            /* A will take place on its right side and send all other items on its right to the end */
+            /* margin-right: auto; */
+            background: hotpink;
+        }
+        .b{
+
+            /* every child elements default value is 0 . so i can give any positive value which is greater than 0 */
+            /* order: 2; */
+            /* if i want to bring b2 at first then give its value less than 0 like any negative value */
+            /* order: -1; */
+            background: red;
+            /* B will take space in its left and go to end with other elements of its rigt or exactly same as margin-right: auto of A */
+            /* margin-left: auto; */
+            /* A will take place on its right side and send all other items on its right to the end */
+            /* margin-right: auto; */
+
+        }
+        .c {
+            background: greenyellow;
+            /* all child items will go to right */
+            /* margin-left: auto; */
+            /* A will take place on its right side and send all other items on its right to the end */
+            /* margin-right: auto; */
+            /* now if i want to bring a sigle box to the cennter or bottom then i have to use align-self because parents property align-items will not work properly in child items*/
+            align-self: flex-end;
+        }
+        .d {
+            background: blue;
+            /* to bring the item center  */
+            margin-left: auto;
+            margin-right: auto;
+            /* all child items will go to right */
+            /* margin-left: auto; */
+            /* A will take place on its right side and send all other items on its right to the end */
+            /* margin-right: auto; */
+            align-self: flex-end;
+        }
+        .e {
+            background: cyan;
+            /* all child items will go to right */
+            /* margin-left: auto; */
+            /* A will take place on its right side and send all other items on its right to the end */
+            /* margin-right: auto; */
+        }
+        /* now i need to apply display flex property to the parent to become flexible for its child elements */
+        .box{
+            background: skyblue;
+            width: 1000px;
+            display: flex;
+            /* to bring the element in the second line after the parent elements area is finished */
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            /* justify-content: flex-end; */
+            /* to spread equally */
+            /* to create space among the child items */
+            /* justify-content: space-evenly; */
+           justify-content: space-between;
+           /* to create space equal space in left and right  */
+           /* justify-content: space-around; */
+           /* Now to bring all the boxes in the center we need to use margin left and right auto */
+           margin-left: auto;
+           margin-right: auto;
+           height: 500px;
+           /* to bring the boxes in center along y axis or vertically then we need to use align-items */
+           /* align-items: center; */
+           /* now to bring the boxes at the bottom or end vertically  */
+           /* align-items: flex-end; */
+
+          
+
+           
+          
+        }
+        /* .anyelement {
+            width: 1000px;
+            background: brown;
+            height: 200px;
+            /*  if any elemet needs to bring at the center of the body or center of a parent div the we need to use margin left and right auto */
+            margin-left: auto;
+            margin-right: auto;
+        } */
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="same a">A 1</div>
+        <div class="same b">B 2</div>
+        <div class="same c">C 3</div>
+        <div class="same d">D 4</div>
+        <div class="same e">E 5</div>
+    </div>
+    <!-- <div class="anyelement">
+
+    </div> -->
+    
+</body>
+</html>
