@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout design</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+           
+        }
+        .container, .container1, .footer {
+            /* width will remain */
+             width: 1000px; 
+            /* height: 200px;
+            background: red; */ 
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container1{
+            justify-content: space-between;
+        }
+        .logo {
+
+            /* flex-basis: 20%; */
+        }
+        .menu {
+            flex-basis: 50%;
+            display: flex;
+            /* flex-basis: 80%; */
+            list-style: none;
+            justify-content: space-between;
+        }
+        .col70 {
+            /* flex-basis will do the work of width */
+            flex-basis:70%;
+            /* background: brown; */
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .col30 {
+            flex-basis: 30%;
+            /* background: blue; */
+        }
+        .col50 {
+            flex-basis: 50%;
+            /* background-color: crimson; */
+        }
+        h1{
+            text-align: center;
+        }
+        .title{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* .x {
+            background: darkmagenta;
+        }
+        .y {
+            background: olive;
+        }
+        .b{
+            background: orange;
+        }
+        .c{
+            background: gold;
+        } */
+        /* ul{
+            display: flex;
+            /* to remove the bullets */
+            /* list-style: none;
+            flex-wrap: wrap; */
+            /* width: 90%; */
+            /* flex-basis: 90%;
+            justify-content: center;
+            justify-content: space-around; */
+            /* justify-content: space-evenly; */
+            
+            
+
+                     
+        
+        /* .logo {
+            margin-right: auto;
+        }
+        .m1, .m2, .m3 {
+           margin-left: 30px;
+        } */
+        
+        /* now consider thar first item1 will be the logo and other items will be the menu */
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <!-- ul>li{Iteam$}*5 -->
+        
+            <div class="logo">
+                <img src="image/proc.png" alt="">
+            </div>
+            
+            <ul class="menu">
+                    
+                <li class="m1">Home</li>
+                <li class="m2">About</li>
+                <li class="m3">Services</li>
+                <li class="m4">Contact</li>
+            </ul>
+           
+    
+        
+    </div>
+    <div class="container">
+        <div class="col70">
+            <div class="col50 ">
+                <h1>Blog Title 1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odio numquam hic esse officiis animi similique est, laudantium ab, voluptatum eaque repellat doloremque consequuntur minima beatae molestiae ad inventore vel fugiat maxime magni nulla! Dolores consequuntur dolore fugiat explicabo sunt! Officiis pariatur quis minus repellat unde repellendus quod at laborum.
+                </p>
+            </div>
+            <div class="col50 ">
+                <h1>Blog Title 2</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odio numquam hic esse officiis animi similique est, laudantium ab, voluptatum eaque repellat doloremque consequuntur minima beatae molestiae ad inventore vel fugiat maxime magni nulla! Dolores consequuntur dolore fugiat explicabo sunt! Officiis pariatur quis minus repellat unde repellendus quod at laborum.
+                </p>
+            </div>
+            <div class="col50 ">
+                <h1>Blog Title 3</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odio numquam hic esse officiis animi similique est, laudantium ab, voluptatum eaque repellat doloremque consequuntur minima beatae molestiae ad inventore vel fugiat maxime magni nulla! Dolores consequuntur dolore fugiat explicabo sunt! Officiis pariatur quis minus repellat unde repellendus quod at laborum.
+                </p>
+            </div>
+            <div class="col50 ">
+                <h1>Blog Title 4</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odio numquam hic esse officiis animi similique est, laudantium ab, voluptatum eaque repellat doloremque consequuntur minima beatae molestiae ad inventore vel fugiat maxime magni nulla! Dolores consequuntur dolore fugiat explicabo sunt! Officiis pariatur quis minus repellat unde repellendus quod at laborum.
+                </p>
+            </div>
+        </div>
+        <div class="col30">
+            <h1>Side Bar items</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odio numquam hic esse officiis animi similique est, laudantium ab, voluptatum eaque repellat doloremque consequuntur minima beatae molestiae ad inventore vel fugiat maxime magni nulla! Dolores consequuntur dolore fugiat explicabo sunt! Officiis pariatur quis minus repellat unde repellendus quod at laborum.
+                </p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <h1 class="title">Footer Area</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quidem officia, reprehenderit tenetur sunt illo deserunt et veniam cupiditate deleniti quo quasi consectetur? Quidem modi quae labore nam ipsum perferendis!
+        </p>
+        
+    </div>
+    
+</body>
+</html>
