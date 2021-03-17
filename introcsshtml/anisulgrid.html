@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid with Anisul Islam</title>
+    <style>
+        .grid-container{
+            display: grid;
+            background: cadetblue;
+            /* now mention how many column you want and say i want three even column */
+            grid-template-columns: auto auto auto auto ;
+            /* now i can define the height of individual row first value is applicable for the first row next value is for second row like this*/
+            /* grid-template-rows: 100px 90px  80px 80px 100px; */
+            /* now how to create gap between rows and column */
+            /* grid-row-gap: 10px;
+            grid-column-gap: 10px; */
+            /* now for this two value we can use a single property named grid-gap: 15px 10px here first value is for row gap and second value is for colums gap */
+            /* grid-gap: 15px 10px; */
+            /* to bring the container in center */
+            justify-content: center;
+            /* justify-content: start;
+            justify-content: end;
+             */
+             align-content: center;
+             /* align-content: start;
+             align-content: end; */
+             
+
+
+
+
+        }
+        .grid-container > div{
+            background: magenta;
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+
+
+        }
+        /* now i can determine from where a column can be start value and where to end value.For this we have to work with the grid items */
+        .item1{
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            /* now for this two property we can use a single property like grid-colum: 1 / 3 */
+            /* grid-column: 1/3; */
+            /* To do the same work we can use grid-colum: 1/ span 3 */
+            grid-column: 1/ span 3;
+            /* we can also do the same thing for row */
+             /* grid-row-start: 1;
+            grid-row-end: 3; */
+            /* now for this two property we can use a single property like grid-row: 1 / 3 */
+            /* grid-row: 1/3; */
+            /* To do the same work we can use grid-row: 1/ span 3 */
+            grid-row: 1/ span 3;
+
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- .grid-container>div{$}*16 -->
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+    
+    
+</body>
+</html>
