@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anisuls last video on Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            /* grid-template-columns: auto auto auto auto; */
+            /* grid-template-columns: 500px auto auto auto; */
+            /* grid-template-columns: 25% 25% 25% 25%; */
+            /* grid-template-columns: repeat(4, 25%); */
+            /* total 4 equal division and every item will take 1 portion */
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            /* now total fraction or division will be 2+1+1+1=5 and first item will take 2 portion and all other part will take 1portion each */
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(5, 1fr); */
+            /* now to make responsive  */
+            grid-template-columns: repeat(auto-fill, min-max(200px,1fr));
+
+        }
+        .grid-container>div{
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- .grid-container>div>p{lorem10}*8 -->
+    <div class="grid-container">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sed voluptatem dolores nobis sunt corrupti ipsum vel odit! Necessitatibus, commodi.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas eaque magnam at corporis ut asperiores praesentium facilis molestias provident quae.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reprehenderit tenetur excepturi quisquam pariatur molestiae praesentium id quas ducimus officia.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iusto ducimus aspernatur dolorum consequuntur expedita quidem repudiandae itaque et iure?</p>
+        </div>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore iusto explicabo quae hic perferendis deleniti ad possimus consequatur molestias qui.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quaerat, reiciendis eveniet numquam atque quasi laboriosam provident error cumque debitis.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quas possimus repudiandae nam obcaecati mollitia unde ex tenetur esse ipsam.</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, pariatur? Iusto architecto sapiente laborum veniam fugiat temporibus vero esse? Omnis.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
